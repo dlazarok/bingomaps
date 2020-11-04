@@ -1,0 +1,23 @@
+﻿<Window x:Class="Maps.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Maps"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="463.779" Width="510.962" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" ResizeMode="NoResize">
+    <Grid Background="#FFDEF1EF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="433"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="505"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="tbLogin" HorizontalAlignment="Left" Height="23" Margin="171,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Cursor="None"/>
+        <Button Name="but1" Content="Войти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" Margin="197,213,0,0" Click="but1_Click_1" Height="27" Background="#FF9BD2F1" RenderTransformOrigin="0.804,-1.765"/>
+        <Label Content="Логин" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.368,0.5" Margin="181,58,0,0" Height="26" Width="44"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.368,0.5" Margin="181,129,0,0" Width="79" Height="26"/>
+        <PasswordBox Name="pbPass" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="165" Margin="171,155,0,0"/>
+        <Label Content="регистрация" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,178,0,0" FontFamily="Nirmala UI" FontStyle="Italic" Background="{x:Null}" Foreground="#FF4838EC" MouseDown="Label_MouseDown"/>
+    </Grid>
+</Window>

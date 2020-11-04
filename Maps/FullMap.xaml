@@ -1,0 +1,30 @@
+﻿<Window x:Class="Maps.FullMap"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:local="clr-namespace:Maps"
+        mc:Ignorable="d"
+        Title="Карта" Height="730.511" Width="1103.138" MouseMove="Window_MouseMove">
+    <Grid Name="grid" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="PanelShowZone"  Width="95*"/>
+
+            <ColumnDefinition Name="Panel"  Width="110*"/>
+            <ColumnDefinition Width="639*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <m:Map Name="map" Mode="Road" ZoomLevel="16" 
+               CredentialsProvider="0rJY0HyaVZHi1HWPOcos~Gx6GxDM29tFyArXVZM_eRA~AidH8MDp9dJj5ntQ7rcsJWSeEZCzvLUtFKzAxt3-4ausZ-ih6xqreMgToaUh1xEf"
+               MouseDoubleClick="DoubleClickMap" Center="55.763, 37.626" Grid.ColumnSpan="3" Margin="0,0,0,0">
+            
+        </m:Map>
+        <local:Searchpanel Visibility="Hidden" x:Name="LeftPanel" Margin="0,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="1" MouseLeave="LeftPanel_MouseLeave"/>
+        <local:PinInfo x:Name="pininfo" Height="90" Width="384" Grid.RowSpan="3" Grid.ColumnSpan="3" MinWidth="499" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden"/>
+    </Grid>
+</Window>

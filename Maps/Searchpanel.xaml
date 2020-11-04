@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Maps.Searchpanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Maps"
+             Name="LeftPanel"
+             mc:Ignorable="d" 
+             d:DesignHeight="437.143" d:DesignWidth="221.428" Background="#FFFFD89F" Opacity="0.8">
+    <Grid RenderTransformOrigin="0.5,0.5" Background="#FFFBF2E6" Opacity="0.9" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.BindingGroup>
+            <BindingGroup/>
+        </Grid.BindingGroup>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="search" HorizontalAlignment="Left" Height="23" Margin="1,53,0,0" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" Width="120" MouseEnter="TextBox_MouseEnter" RenderTransformOrigin="0.504,0.913" Grid.ColumnSpan="2" Grid.Column="1" />
+        <Label Content="Категории" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,162,0,0" Grid.ColumnSpan="2" Height="26" Width="67" Grid.Column="1"/>
+        <CheckBox Name="cbSport" Content="Спорт (S)" HorizontalAlignment="Left" Margin="0,193,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="15" Width="80" Grid.Column="1"/>
+        <CheckBox Name="cbMeet" Content="Встречи (M)" HorizontalAlignment="Left" Margin="0,213,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="15" Width="96" Grid.Column="1"/>
+        <CheckBox Name="cbEvent" Content="Мероприятия (E)" HorizontalAlignment="Left" Margin="0,233,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="15" Width="121" Grid.Column="1"/>
+        <CheckBox Name="cbParty" Content="Вечеринки (P)" HorizontalAlignment="Left" Margin="0,253,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="15" Width="107" Grid.Column="1"/>
+        <Button  Content="Применить" VerticalAlignment="Top" Margin="0,5,0,0" Height="23" RenderTransformOrigin="0,0" Background="White" Grid.Column="2" Grid.Row="1" Click="Button_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</UserControl>

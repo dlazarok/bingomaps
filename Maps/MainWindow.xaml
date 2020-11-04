@@ -1,0 +1,31 @@
+﻿<Window x:Class="Maps.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Maps"
+        mc:Ignorable="d"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        Title="Главное меню" Height="656" Width="1280">
+    <Grid Background="#FFE0C6A0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="482*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="240" MaxWidth="240"/>
+        </Grid.ColumnDefinitions>
+        <m:Map Name="map" Mode="Road" ZoomLevel="16" 
+               CredentialsProvider="0rJY0HyaVZHi1HWPOcos~Gx6GxDM29tFyArXVZM_eRA~AidH8MDp9dJj5ntQ7rcsJWSeEZCzvLUtFKzAxt3-4ausZ-ih6xqreMgToaUh1xEf"
+               Center="55.763, 37.626" Margin="0,0,0,0">
+        </m:Map>
+        <local:PinInfo x:Name="pininfo" Visibility="Hidden" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="384" Margin="373,226,0,0" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
+        <Button Content="Обновить" HorizontalAlignment="Right" VerticalAlignment="Top" Width="132" Margin="0,10,10,0" Background="White" Height="40" RenderTransformOrigin="-0.038,0.6" Grid.Row="1" Click="Button_Click_1"/>
+        <Label Content="Добро пожаловать!" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="28,170,0,0" FontFamily="Verdana" FontSize="20" Height="34" Width="211"/>
+        <Button Content="Полная карта" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Grid.Column="1" Margin="46,247,0,0" Height="44" Background="#FFEDF5DB" Click="Button_Click"/>
+        <Button Content="Встречи" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Grid.Column="1" Margin="46,362,0,0" Height="44" Background="#FFEDF5DB" Click="Button_Click_3"/>
+        <TextBox Name="tbSearch" HorizontalAlignment="Left" Height="23" Margin="209,23,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" Width="188" MouseEnter="TextBox_MouseEnter" TextDecorations="{x:Null}" Padding="75,2,0,0" />
+        <Button Content="Найти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="144" Margin="483,22,0,0" Grid.Row="1" Background="#FFFFFCFC" Height="23" Click="Button_Click_2"/>
+    </Grid>
+</Window>
